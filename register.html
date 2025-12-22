@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Registration</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(to right, #74ebd5, #9face6);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box {
+      background: #fff;
+      padding: 20px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    h3 {
+      text-align: center;
+    }
+    input, select, button {
+      width: 100%;
+      margin: 8px 0;
+      padding: 8px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    #msg {
+      margin-top: 10px;
+      color: green;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Event Registration</h3>
+  <input type="text" id="name" placeholder="Your Name">
+  <input type="email" id="email" placeholder="Your Email">
+  
+  <!-- New Component 1 -->
+  <input type="date" id="date">
+
+  <!-- New Component 2 -->
+  <select id="type">
+    <option value="">Select Event Type</option>
+    <option>Workshop</option>
+    <option>Seminar</option>
+    <option>Hackathon</option>
+  </select>
+
+  <button onclick="register()">Register</button>
+  <div id="msg"></div>
+</div>
+
+<script>
+  function register() {
+    let name = name.value;
+    let email = email.value;
+    let date = document.getElementById("date").value;
+    let type = document.getElementById("type").value;
+
+    if (!name || !email || !date || !type) {
+      alert("Please fill all fields");
+    } else {
+      msg.innerText = "Registered successfully for " + type + "!";
+    }
+  }
+</script>
+
+</body>
+</html>
+
