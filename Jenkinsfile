@@ -14,13 +14,13 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls -ltr'
-                sh 'javac sample.java'
+                sh 'javac Sample.java'
             }
         }
 
         stage('Run') {
             steps {
-                sh 'java sample'
+                sh 'java Sample'
             }
         }
 
