@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'master',
+                git branch: 'cse',
                     url: 'https://github.com/abhinav761/devops.git',
                     credentialsId: 'github-token'
             }
