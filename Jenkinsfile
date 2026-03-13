@@ -13,6 +13,7 @@ pipeline {
 
         stage('Build') {
             steps {
+                sh 'ls -ltr'
                 sh 'javac sample.java'
             }
         }
