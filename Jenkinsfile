@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        jdk 'jdk17' // Replace 'jdk17' with the Name configured in Manage Jenkins > Tools
+    }
     stages {
 
         stage('Checkout') {
@@ -13,6 +15,7 @@ pipeline {
 
         stage('Build') {
             steps {
+                sh 'ls -ltr'
                 sh 'javac Sample.java'
             }
         }
