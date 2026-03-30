@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'ls -ltr'
+                bat 'ls -ltr'
                 bat 'javac Sample.java'
             }
         }
