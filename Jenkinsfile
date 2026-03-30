@@ -16,13 +16,13 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls -ltr'
-                sh 'javac Sample.java'
+                bat 'javac Sample.java'
             }
         }
 
         stage('Run') {
             steps {
-                sh 'java Sample'
+                bat 'java Sample'
             }
         }
 
